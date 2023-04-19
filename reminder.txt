@@ -1,0 +1,6 @@
+[vCenter, vRadius, mR, vParamsEqEl, chi2] = ellipsoid_fit_new(mDataTemp, '');
+    % Cas ou on estime que la diagonale
+%     [vCenter, vRadius, mR, vParamsEqEl, chi2] = ellipsoid_fit_new(mDataTemp, '0');
+
+    % Matrice de calibration
+    mCal = mR * diag(1./(vRadius * StdData)) * mR';
